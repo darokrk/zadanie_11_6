@@ -155,6 +155,6 @@ $(function() {
 	// dodanie kart do kolumn
 
 	todoColumn.addCard(card1);
-	doingcolumn.addCard(card2);
+	doingColumn.addCard(card2);
 
 });

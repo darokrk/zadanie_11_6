@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&subset=latin-ext");
+* { box-sizing: border-box; }
+
+body { margin: 0; padding: 0; font-family: 'Lato', sans-serif; }
+
+.header-container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; background-color: #2980b9; }
+
+.header-container h1 { -webkit-box-flex: 2; -ms-flex: 2; flex: 2; margin-left: 100px; font-size: 42px; color: #fff; }
+
+.header-container .create-column { width: 140px; height: 50px; margin-top: 25px; margin-right: 40px; background: inherit; color: #fff; border-style: solid; font-size: 15px; }
+
+.header-container .create-column:hover { cursor: pointer; }
+
+.column-container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: wrap; flex-wrap: wrap; -ms-flex-pack: distribute; justify-content: space-around; background-color: #16a085; }
+
+.column-container .column { width: 400px; min-height: 445px; text-align: center; background-color: #efc92f; position: relative; margin-top: 60px; margin-bottom: 60px; border-radius: 5%; box-shadow: 2px 2px 2px #000; }
+
+.column-container .column .column-title { font-size: 26px; border-bottom: 3px dashed darkblue; padding-bottom: 20px; }
+
+.column-container .column .btn-delete { position: absolute; bottom: 5%; right: 5%; }
+
+.column-container .column .btn-delete:hover { cursor: pointer; }
+
+.column-container .column .add-card { position: absolute; top: 3%; right: 3%; cursor: pointer; }
+
+.column-container .column-card-list { height: inherit; list-style-type: none; margin: 0; padding: 0; }
+
+.column-container .column-card-list .card { width: 250px; margin: 25px auto; border: 3px solid black; border-radius: 5%; background: #ecf0f1; }
+
+.column-container .column-card-list .card:hover { cursor: pointer; }
