@@ -27,8 +27,8 @@ $(function() {
 			var $column = $('<div>').addClass('column');
 			var $columnTitle = $('<h2>').addClass('column-title').text(self.name);
 			var $columnCardList = $('<ul>').addClass('column-card-list');
-			var $columnDelete = $('<button>').addClass('btn-delete').text('x');
-			var $columnAddCard = $('<button>').addClass('add-card').text('Add a card');
+			var $columnDelete = $('<button>').addClass('btn-delete-column fa fa-trash-o').text('');
+			var $columnAddCard = $('<button>').addClass('add-card fa fa-plus-square').text('');
 		
 
 			// kasowanie kolumny po kliknieciu w przycisk
