@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&subset=latin-ext");
+* { box-sizing: border-box; }
+
+body { margin: 0; padding: 0; font-family: 'Lato', sans-serif; background-color: #FC4442; }
+
+.header-container { display: flex; flex-direction: row; background-color: #3E333F; }
+
+.header-container h1 { flex: 2; margin-left: 100px; font-size: 42px; color: #fff; }
+
+.header-container .create-column { width: 140px; height: 50px; margin-top: 25px; margin-right: 40px; background: inherit; color: #fff; border-style: solid; font-size: 15px; transition: 0.7s ease-out; outline: none; }
+
+.header-container .create-column:hover { cursor: pointer; border-color: #FC4442; color: #FC4442; transform: scale(1.2); }
+
+.column-container { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-around; background-color: #FC4442; }
+
+.column-container .column { width: 400px; min-height: 445px; text-align: center; background-color: #F0E19E; position: relative; margin-top: 60px; margin-bottom: 60px; border-radius: 5%; box-shadow: 2px 2px 2px #000; }
+
+.column-container .column .column-title { margin: 0; padding: 15px 45px; font-size: 26px; word-wrap: break-word; }
+
+.column-container .column .btn-delete-column { position: absolute; bottom: 3%; right: 3%; background: inherit; border-style: none; font-size: 22px; transition: 0.7s ease-out; outline: none; }
+
+.column-container .column .btn-delete-column:hover { cursor: pointer; transform: scale(1.1); color: #FC4442; }
+
+.column-container .column .add-card { position: absolute; top: 3%; right: 3%; background: inherit; border-style: none; font-size: 22px; outline: none; transition: 0.7s ease-out; }
+
+.column-container .column .add-card:hover { cursor: pointer; transform: scale(1.1); color: green; }
+
+.column-container .column-card-list { min-height: 310px; list-style-type: none; margin: 0; padding: 0; border-top: 3px dashed darkblue; }
+
+.column-container .column-card-list .card { width: 250px; min-height: 50px; margin: 25px; word-wrap: break-word; border: 3px solid black; border-radius: 3%; background: #F2F2F2; position: relative; left: 50px; }
+
+.column-container .column-card-list .card:hover { cursor: pointer; }
+
+.column-container .column-card-list .card .card-description { padding: 10px; }
+
+.column-container .column-card-list .card .btn-delete { position: absolute; right: 0; border-style: none; background: inherit; outline: none; margin: 5px; font-weight: bold; transition: 0.7s; }
+
+.column-container .column-card-list .card .btn-delete:hover { cursor: pointer; color: red; }
+
+@media (max-width: 780px) { .header-container { display: flex; flex-direction: column; }
+  .header-container h1 { margin: 20px auto; }
+  .header-container .create-column { margin: 20px auto; } }
