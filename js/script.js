@@ -40,7 +40,13 @@ $(function() {
 			// dodaj notatke po kliknieciu w przycisk
 
 			$columnAddCard.click(function() {
-				self.addCard(new Card(prompt("Enter the name of the card")));
+				var card = prompt("Enter the name of the card");
+				if (card) {
+					return self.addCard(new Card(card));
+				}
+				else {
+					alert("Card name is empty");
+				}
 			});	
 
 			// konstruowanie kolumny
@@ -130,7 +136,12 @@ $(function() {
 	$('.create-column').click(function() {
 		var name = prompt('Enter a column name');
 		var column = new Column(name);
-			board.addColumn(column);
+		if (name) {
+			return board.addColumn(column);
+		}
+		else {
+			alert("Column name is empty");
+		}
 	});
 
 	// tworzenie elementow w kanbanie
