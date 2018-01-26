@@ -42,10 +42,10 @@ $(function() {
 			$columnAddCard.click(function() {
 				var card = prompt("Enter the name of the card");
 				if (card) {
-					return self.addCard(new Card(card));
+					self.addCard(new Card(card));
 				}
-				else {
-					alert("Card name is empty");
+				else if (card.length === 0){
+					self.addCard(new Card(card));
 				}
 			});	
 
@@ -135,13 +135,15 @@ $(function() {
 
 	$('.create-column').click(function() {
 		var name = prompt('Enter a column name');
-		var column = new Column(name);
+
 		if (name) {
-			return board.addColumn(column);
+			var column = new Column(name);
+			board.addColumn(column);
 		}
-		else {
-			alert("Column name is empty");
+		else if (name.length === 0) {
+			board.addColumn(new Column('Empty column'));
 		}
+
 	});
 
 	// tworzenie elementow w kanbanie
